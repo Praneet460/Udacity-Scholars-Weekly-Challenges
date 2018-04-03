@@ -1,0 +1,22 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:padding="6dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp"
+            tools:text="Name or Title"/>
+
+
+</LinearLayout>
