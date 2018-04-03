@@ -5,7 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <ImageButton
+
+    <android.support.v7.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/listitem_selector"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:padding="6dp"
@@ -18,5 +29,7 @@
             android:textSize="18sp"
             tools:text="Name or Title"/>
 
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>
