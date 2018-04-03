@@ -1,0 +1,2 @@
+# Udacity-Scholars-Weekly-Challenges
+This repository is created for Google Udacity Indian Scholars. It contains the weekly challenges provided to students of Android Intermediate Track. Each weekly challenge contains a set of bugs and students needed to solve it. They can also make it more creative. At the end of each week the list of TOP 10 students who performed well in the challenge, will be listed in the Repo's Readme file. 
