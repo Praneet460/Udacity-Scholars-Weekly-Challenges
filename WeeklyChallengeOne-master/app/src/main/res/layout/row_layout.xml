@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/cyan"
             android:textSize="18sp"
             tools:text="Name or Title"/>
 
