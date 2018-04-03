@@ -16,3 +16,7 @@ After removing the bugs the application will look like this :
 
 
 <img src = "https://i.imgur.com/DfIu4Aq.png" width=350>
+
+## List of Top 10 performers of this week 
+
+Updated at the end of this week's task
