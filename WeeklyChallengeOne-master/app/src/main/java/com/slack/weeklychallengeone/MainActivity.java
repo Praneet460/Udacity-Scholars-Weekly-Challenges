@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private MyAdapter mAdapter;
     private RecyclerView mRecyclerView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,18 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     private void initViews(){
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
     }
-
-
-
-
-
 
     private void loadData(){
 
@@ -50,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Card View"));
         mArrayList.add(new Model("Scroll Views"));
         mArrayList.add(new Model("Grid View"));
+        mArrayList.add(new Model("Recycler View"));
+        mArrayList.add(new Model("List View"));
+        mArrayList.add(new Model("My View"));
 
 
 
