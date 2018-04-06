@@ -14,10 +14,12 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private ArrayList<Model> mArrayList;
+    private final ListItemClickListner mListItemClickListner;
 
 
-    public MyAdapter(ArrayList<Model> mArrayList) {
+    public MyAdapter(ArrayList<Model> mArrayList, ListItemClickListner mListItemClickListner) {
         this.mArrayList = mArrayList;
+        this.mListItemClickListner = mListItemClickListner;
     }
 
     @NonNull
@@ -38,13 +40,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    //To Handel the click listner
+   public  interface ListItemClickListner{
+        void ListItemClick(int clickedItemIndex);
+    }
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView tv_name;
         MyViewHolder(View view) {
             super(view);
-
+    
             tv_name = view.findViewById(R.id.tv_name);
+            view.setOnClickListener(this);
 
+        }
+    
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            mListItemClickListner.ListItemClick(position);
         }
     }
 

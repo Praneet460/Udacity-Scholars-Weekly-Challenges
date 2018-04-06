@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeeklyChallengeOne</string>
+    <string name="learn_more">Click for Learn About this</string>
+    <string name="name_or_title">Name or Title</string>
 </resources>
