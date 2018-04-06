@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.helper.ItemTouchHelper;
 
 import com.slack.weeklychallengeone.Utils.Model;
 import com.slack.weeklychallengeone.Utils.MyAdapter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,17 +26,41 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         loadData();
-        initViews();
+        init();
 
     }
 
 
-    private void initViews() {
+    private void init() {
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,1));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, 1));
         mAdapter = new MyAdapter(mArrayList);
         mRecyclerView.setAdapter(mAdapter);
+
+        int dragDir = ItemTouchHelper.UP | ItemTouchHelper.DOWN
+                | ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT;
+
+        ItemTouchHelper touchHelper = new ItemTouchHelper(
+                new ItemTouchHelper.SimpleCallback(dragDir, 0) {
+
+                    @Override
+                    public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                        int fromPos = viewHolder.getAdapterPosition();
+                        int toPos = target.getAdapterPosition();
+
+                        Collections.swap(mArrayList, fromPos, toPos);
+                        mAdapter.notifyItemMoved(fromPos, toPos);
+
+                        return true;
+                    }
+
+                    @Override
+                    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+
+                    }
+                });
+        touchHelper.attachToRecyclerView(mRecyclerView);
     }
 
 

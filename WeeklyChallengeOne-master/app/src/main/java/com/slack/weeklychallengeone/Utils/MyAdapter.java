@@ -1,6 +1,7 @@
 package com.slack.weeklychallengeone.Utils;
 
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -41,12 +42,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView view_name,view_detail;
+        private TextView view_name, view_detail;
+
         MyViewHolder(View view) {
             super(view);
             view_name = view.findViewById(R.id.view_name);
             view_detail = view.findViewById(R.id.view_detail);
         }
+
     }
 
 
