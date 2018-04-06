@@ -15,7 +15,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private ArrayList<Model> mArrayList;
 
-
     public MyAdapter(ArrayList<Model> mArrayList) {
         this.mArrayList = mArrayList;
     }
@@ -37,16 +36,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return mArrayList.size();
     }
 
-
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView tv_name;
+
         MyViewHolder(View view) {
             super(view);
 
             tv_name = view.findViewById(R.id.tv_name);
-
         }
     }
-
-
 }
