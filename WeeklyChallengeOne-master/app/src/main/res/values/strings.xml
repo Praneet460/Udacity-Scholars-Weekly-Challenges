@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WeeklyChallengeOne</string>
+
+    <string name="cons_layout_desc">A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way.</string>
+    <string name="linear_layout_desc">LinearLayout is a view group that aligns all children in a single direction, vertically or horizontally. You can specify the layout direction with the android:orientation attribute.</string>
+    <string name="rel_layout_Desc">RelativeLayout is a view group that displays child views in relative positions. The position of each view can be specified as relative to sibling elements or in positions relative to each other.</string>
+    <string name="cardview_desc">A FrameLayout with a rounded corner background and shadow.</string>
+    <string name="scrollview_desc">A view group that allows the view hierarchy placed within it to be scrolled. Scroll view may have only one direct child placed within it.</string>
+    <string name="gridview_desc">GridView is a ViewGroup that displays items in a two-dimensional, scrollable grid. The grid items are automatically inserted to the layout using a ListAdapter.</string>
+
 </resources>
