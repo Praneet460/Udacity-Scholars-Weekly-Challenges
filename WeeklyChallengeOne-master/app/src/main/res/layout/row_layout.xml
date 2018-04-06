@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-<<<<<<< HEAD
     <android.support.v7.widget.CardView
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
@@ -17,13 +16,6 @@
         >
 
         <TextView
-=======
-        <TextView
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:padding="6dp"
-            android:gravity="center_horizontal"
->>>>>>> 05e588f09ff546188d1f348e0ad8ef44cae39484
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
