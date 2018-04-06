@@ -7,6 +7,9 @@ After you have successfully fixed it, you have to materialize it :smiley:. Use y
 
 When you have fixed the errors just send a Pull Request to this GitHub repo.
 
+## Note
+The Last date for completing the assignment has been extended to 20th April, 2018.
+
 
 ## Where are the errors :
 
