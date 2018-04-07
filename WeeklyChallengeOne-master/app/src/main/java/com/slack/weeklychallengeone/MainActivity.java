@@ -10,36 +10,34 @@ import com.slack.weeklychallengeone.Utils.MyAdapter;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
+    private RecyclerView mRecyclerView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
 
     }
-
+//9997828073,9719334494
 
     private void initViews(){
-        mRecyclerView = findViewById(R.id.recyler_view);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
     }
 
 
-
-
-
-
-/*    private void loadData(){
+    private void loadData(){
 
         mArrayList = new ArrayList<>();
 
@@ -53,10 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
-    }*/
-
-
+    }
 
 }
