@@ -43,7 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         MyViewHolder(View view) {
             super(view);
 
-            tv_name = view.findViewById(R.id.tv_name);
+            tv_name = (TextView) view.findViewById(R.id.tv_name);
 
         }
     }
