@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.slack.weeklychallengeone.R;
@@ -42,9 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         private TextView tv_name;
         MyViewHolder(View view) {
             super(view);
-
             tv_name = view.findViewById(R.id.tv_name);
-
         }
     }
 
