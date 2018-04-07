@@ -1,14 +1,37 @@
 package com.slack.weeklychallengeone.Utils;
 
 public class Model {
-    private String name;
+    private String itemName;
+    private String itemExtends;
+    private String itemDescription;
 
-    public Model(String name) {
-        this.name = name;
+    public Model(String itemName, String itemExtends, String itemDescription) {
+        this.itemName = itemName;
+        this.itemExtends = itemExtends;
+        this.itemDescription = itemDescription;
     }
 
-    public String getName() {
-        return name;
+    String getItemName() {
+        return itemName;
     }
 
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getItemExtends() {
+        return itemExtends;
+    }
+
+    public void setItemExtends(String itemExtends) {
+        this.itemExtends = itemExtends;
+    }
+
+    public String getItemDescription() {
+        return itemDescription;
+    }
+
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
+    }
 }

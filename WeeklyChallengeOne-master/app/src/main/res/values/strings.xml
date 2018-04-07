@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WeeklyChallengeOne</string>
+    <string name="item">Item</string>
 </resources>
