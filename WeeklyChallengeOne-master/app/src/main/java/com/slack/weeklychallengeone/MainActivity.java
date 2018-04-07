@@ -2,6 +2,7 @@ package com.slack.weeklychallengeone;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -14,49 +15,31 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
-
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
-
+        setContentView(R.layout.activity_main);
         initViews();
         loadData();
-
     }
-
 
     private void initViews(){
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
-
-
-
-
-
-/*    private void loadData(){
-
+    private void loadData(){
         mArrayList = new ArrayList<>();
-
-        mArrayList.add(new Model("Constraint Layout"));
-        mArrayList.add(new Model("Linear Layout"));
-        mArrayList.add(new Model("Relative Layout"));
-        mArrayList.add(new Model("Card View"));
-        mArrayList.add(new Model("Scroll Views"));
-        mArrayList.add(new Model("Grid View"));
-
-
-
-        mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
-
-    }*/
-
-
-
+        mArrayList.add(new Model("Constraint Layout", 1));
+        mArrayList.add(new Model("Linear Layout", 2));
+        mArrayList.add(new Model("Relative Layout", 3));
+        mArrayList.add(new Model("Card View", 4));
+        mArrayList.add(new Model("Scroll Views", 5));
+        mArrayList.add(new Model("Grid View", 6));
+        mAdapter = new MyAdapter(this, mArrayList);
+        mRecyclerView.setAdapter(mAdapter);
+    }
 }
