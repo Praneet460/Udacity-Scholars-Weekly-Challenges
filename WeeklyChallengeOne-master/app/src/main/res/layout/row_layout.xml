@@ -1,22 +1,74 @@
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false">
 
-        <ImageButton
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:padding="6dp"
-            android:gravity="center_horizontal"
-            android:id="@+id/tv_name"
+    <com.ramotion.foldingcell.FoldingCell
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_padding_8"
+        android:layout_marginEnd="@dimen/margin_padding_16"
+        android:layout_marginStart="@dimen/margin_padding_16"
+        android:layout_marginTop="@dimen/margin_padding_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/cell_content_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@android:color/primary_text_light"
-            android:textSize="18sp"
-            tools:text="Name or Title"/>
+            android:visibility="gone">
 
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="8dp"
+                app:cardCornerRadius="4dp">
 
-</LinearLayout>
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:fontFamily="monospace"
+                    android:padding="@dimen/margin_padding_8"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:text="@tools:sample/full_names"/>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="monospace"
+                    android:padding="@dimen/margin_padding_16"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/white"
+                    tools:text="@tools:sample/full_names"/>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+    </com.ramotion.foldingcell.FoldingCell>
+</android.support.constraint.ConstraintLayout>
