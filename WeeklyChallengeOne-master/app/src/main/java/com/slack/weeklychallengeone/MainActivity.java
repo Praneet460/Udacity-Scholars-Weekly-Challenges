@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
             "GridView layout in one of the most useful layouts in android. Gridview is mainly useful when we want show data in grid layout like displaying images or icons. This layout can be used to build applications like image viewer, audio or video players in order to show elements in grid manner."
     };
 
+    private  final String links[]={
+            "https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html",
+            "https://developer.android.com/guide/topics/ui/layout/linear.html",
+            "https://developer.android.com/guide/topics/ui/layout/relative.html",
+            "https://developer.android.com/reference/android/support/v7/widget/CardView.html",
+            "https://developer.android.com/reference/android/widget/ScrollView.html",
+            "https://developer.android.com/guide/topics/ui/layout/gridview.html"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         mArrayList = new ArrayList<>();
 
         for(int i=0;i<name.length;i++){
-            Model model = new Model(name[i], description[i]);
+            Model model = new Model(name[i], description[i], links[i]);
             mArrayList.add(model);
         }
 

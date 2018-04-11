@@ -19,8 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\srikarn\Documents\GitHub\Udacity-Scholars-Weekly-Challenges\ic_share_black_24dp\ic_share_black_24dp\android\drawable-xxxhdpi\ic_share_black_24dp.png" />
-                                      <entry key="outputName" value="ic_share" />
+                                      <entry key="imageAsset" value="D:\Android\Projects\Udacity-Scholars-Weekly-Challenges\ic_link_black_24dp.png" />
+                                      <entry key="outputName" value="ic_link" />
                                     </map>
                                   </option>
                                 </PersistentState>

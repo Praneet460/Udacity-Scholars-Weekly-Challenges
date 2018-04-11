@@ -3,10 +3,12 @@ package com.slack.weeklychallengeone.Utils;
 public class Model {
     private String name;
     private String description;
+    private String links;
 
-    public Model(String name, String description) {
+    public Model(String name, String description, String links) {
         this.name = name;
         this.description = description;
+        this.links=links;
     }
 
     public void setName(String name) {
@@ -22,6 +24,14 @@ public class Model {
     }
     public  String getDescription(){
         return  description;
+    }
+
+    public String getLinks() {
+        return links;
+    }
+
+    public void setLinks(String links) {
+        this.links = links;
     }
 
 }

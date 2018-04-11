@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -45,6 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         holder.tv_description.setVisibility(View.GONE);
         holder.tv_share.setVisibility(View.GONE);
+        holder.tv_link.setVisibility(View.GONE);
         holder.tv_name.setText(mArrayList.get(position).getName());
         holder.tv_name.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +62,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     }
                 });
                 holder.tv_share.setVisibility(View.VISIBLE);
+
+                holder.tv_link.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Log.v("Details", mArrayList.get(position).getLinks() );
+                        openLink(mArrayList.get(position).getLinks());
+                    }
+                });
+                holder.tv_link.setVisibility(View.VISIBLE);
             }
         });
 
@@ -68,23 +79,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             public void onClick(View v) {
                 holder.tv_description.setVisibility(View.GONE);
                 holder.tv_share.setVisibility(View.GONE);
+                holder.tv_link.setVisibility(View.GONE);
                 holder.tv_name.setVisibility(View.VISIBLE);
             }
         });
 
         Random rnd = new Random();
         if(position == 0){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.lime500));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.red));
         } else if(position == 1){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.amber400));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teal));
         } else if(position == 2){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.pink400));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.deeporange));
         } else if(position == 3){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.deeppurple400));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.pink));
         } else if (position == 4){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.blue800));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.litegreen));
         } else if(position == 5) {
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.red400));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.cyan));
         }
 
        /* Random rnd = new Random();
@@ -123,6 +135,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         private TextView tv_name;
         private TextView tv_description;
         private ImageButton tv_share;
+        private ImageButton tv_link;
         private CardView tv_card;
         MyViewHolder(View view) {
             super(view);
@@ -131,6 +144,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             tv_description= view.findViewById(R.id.description);
             tv_share = view.findViewById(R.id.share);
             tv_card = view.findViewById(R.id.card_view);
+            tv_link = view.findViewById(R.id.link);
 
         }
     }
@@ -144,5 +158,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     }
 
+    public void openLink(String links){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(links));
+        context.startActivity(browserIntent);
+    }
 
 }
