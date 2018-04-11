@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private MyAdapter mAdapter;
     private  RecyclerView mRecyclerView;
 
-    //int resId = R.anim.item_animation_fall_down;
-
     private final String name[] ={
             "Constraint Layout",
              "Linear Layout",
@@ -54,9 +52,6 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
-      /*  LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(getBaseContext(), resId);
-        mRecyclerView.setLayoutAnimation(animation);
-*/
     }
 
 
