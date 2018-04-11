@@ -72,37 +72,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
         });
 
-        //Random rnd = new Random();
+       /* Random rnd = new Random();
         //Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-
         switch(position){
             case 0:
-                holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.greenA200));
-               /* holder.tv_card.setCardBackgroundColor(Color.argb(255, rnd.nextInt(150), rnd.nextInt(150), rnd.nextInt(150)));
-                holder.tv_card.setRadius(10);*/
+                holder.tv_card.setCardBackgroundColor(Color.argb(255, rnd.nextInt(50), rnd.nextInt(50), rnd.nextInt(50)));
+                holder.tv_card.setRadius(10);
             case 1:
-                holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.amber400));
-                /*holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(150), rnd.nextInt(150), rnd.nextInt(150)));
-                holder.tv_card.setRadius(10);*/
+                holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(50), rnd.nextInt(50), rnd.nextInt(50)));
+                holder.tv_card.setRadius(10);
             case 2:
-                holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.deeppurple400));
-               /* holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(150), rnd.nextInt(150), rnd.nextInt(150)));
-                holder.tv_card.setRadius(10);*/
+                holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(50), rnd.nextInt(150), rnd.nextInt(150)));
+                holder.tv_card.setRadius(10);
             case 3:
-                holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.red400));
-               /* holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(150), rnd.nextInt(150), rnd.nextInt(150)));
-                holder.tv_card.setRadius(10);*/
+                holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(50), rnd.nextInt(150), rnd.nextInt(150)));
+                holder.tv_card.setRadius(10);
             case 4:
-                holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.pink400));
-              /*  holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(150), rnd.nextInt(150), rnd.nextInt(150)));
-                holder.tv_card.setRadius(10);*/
+                holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(50), rnd.nextInt(150), rnd.nextInt(150)));
+                holder.tv_card.setRadius(10);
             case 5:
-                holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.lime400));
-                /*holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(150), rnd.nextInt(150), rnd.nextInt(150)));
-                holder.tv_card.setRadius(10);*/
-
-
-        }
+                holder.tv_card.setBackgroundColor(Color.argb(255, rnd.nextInt(50), rnd.nextInt(150), rnd.nextInt(150)));
+                holder.tv_card.setRadius(10);
+        }*/
 
 
     }
