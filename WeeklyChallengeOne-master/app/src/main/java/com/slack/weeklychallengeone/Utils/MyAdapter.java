@@ -72,6 +72,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
         });
 
+        Random rnd = new Random();
+        if(position == 0){
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.lime500));
+        } else if(position == 1){
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.amber400));
+        } else if(position == 2){
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.pink400));
+        } else if(position == 3){
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.deeppurple400));
+        } else if (position == 4){
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.blue800));
+        } else if(position == 5) {
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.red400));
+        }
+
        /* Random rnd = new Random();
         //Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         switch(position){

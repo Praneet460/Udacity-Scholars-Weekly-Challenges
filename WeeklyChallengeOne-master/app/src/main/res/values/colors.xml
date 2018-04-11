@@ -4,10 +4,10 @@
     <color name="colorPrimaryDark">#c66900</color>
     <color name="colorAccent">#FF4081</color>
     <color name="grey400">#BDBDBD</color>
-    <color name="greenA200">#B2FF59</color>
+    <color name="blue800">#0277BD</color>
     <color name="amber400">#FFCA28</color>
     <color name="deeppurple400">#7E57C2</color>
     <color name="pink400">#EC407A</color>
     <color name="red400">#EF5350</color>
-    <color name="lime400">#D4E157</color>
+    <color name="lime500">#CDDC39</color>
 </resources>
