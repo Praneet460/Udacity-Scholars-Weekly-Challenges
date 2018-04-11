@@ -1,20 +1,24 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/ripple_effect"
+    android:clickable="true"
+    android:transitionName="layout"
+    android:focusable="true" >
 
-        <ImageButton
+        <TextView
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:padding="6dp"
+            android:transitionName="layout_title"
             android:gravity="center_horizontal"
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@android:color/primary_text_light"
+            android:textColor="#ffffff"
             android:textSize="18sp"
             tools:text="Name or Title"/>
 
