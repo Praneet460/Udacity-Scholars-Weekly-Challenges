@@ -51,7 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.tv_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                holder.tv_name.setVisibility(View.GONE);
+                holder.tv_name.setVisibility(View.VISIBLE);
                 holder.tv_description.setText(mArrayList.get(position).getDescription());
                 holder.tv_description.setVisibility(View.VISIBLE);
                 holder.tv_share.setOnClickListener(new View.OnClickListener() {
@@ -86,17 +86,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         Random rnd = new Random();
         if(position == 0){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.red));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teallight));
         } else if(position == 1){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teal));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teallight));
         } else if(position == 2){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.deeporange));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teallight));
         } else if(position == 3){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.pink));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teallight));
         } else if (position == 4){
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.litegreen));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teallight));
         } else if(position == 5) {
-            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.cyan));
+            holder.tv_card.setCardBackgroundColor(context.getResources().getColor(R.color.teallight));
         }
 
        /* Random rnd = new Random();
