@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#26a69a</color>
+    <color name="colorPrimaryDark">#00766c</color>
+    <color name="colorAccent">#ffc400</color>
+
+    <!-- =========================================== -->
+    <!-- COLORS USED FOR THE CONSTRAINT LAYOUT STUFF -->
+    <!-- =========================================== -->
+    <color name="constraintLayoutColorPrimary">#388e3c</color>
+    <color name="constraintLayoutColorPrimaryDark">#1b5e20</color>
+    <color name="constraintLayoutColorPrimaryLight">#e8f5e9</color>
+    <color name="constraintLayoutColorAccent">#009fa5</color>
+
+    <!-- ======================================= -->
+    <!-- COLORS USED FOR THE LINEAR LAYOUT STUFF -->
+    <!-- ======================================= -->
+    <color name="linearLayoutColorPrimary">#1e88e5</color>
+    <color name="linearLayoutColorPrimaryDark">#1565c0</color>
+    <color name="linearLayoutColorPrimaryLight">#e3f2fd</color>
+    <color name="linearLayoutColorAccent">#2962ff</color>
+
+    <!-- ========================================= -->
+    <!-- COLORS USED FOR THE RELATIVE LAYOUT STUFF -->
+    <!-- ========================================= -->
+    <color name="relativeLayoutColorPrimary">#3f51b5</color>
+    <color name="relativeLayoutColorPrimaryDark">#303f9f</color>
+    <color name="relativeLayoutColorPrimaryLight">#e8eaf6</color>
+    <color name="relativeLayoutColorAccent">#304ffe</color>
+
+    <!-- ========================================== -->
+    <!-- COLORS USED FOR THE CARD VIEW LAYOUT STUFF -->
+    <!-- ========================================== -->
+    <color name="cardViewLayoutColorPrimary">#f44336</color>
+    <color name="cardViewLayoutColorPrimaryDark">#d32f2f</color>
+    <color name="cardViewLayoutColorPrimaryLight">#ffebee</color>
+    <color name="cardViewLayoutColorAccent">#d50000</color>
+
+    <!-- =========================================== -->
+    <!-- COLORS USED FOR THE SCROLLVIEW LAYOUT STUFF -->
+    <!-- =========================================== -->
+    <color name="scrollViewLayoutColorPrimary">#9c27b0</color>
+    <color name="scrollViewLayoutColorPrimaryDark">#7b1fa2</color>
+    <color name="scrollViewLayoutColorPrimaryLight">#f3e5f5</color>
+    <color name="scrollViewLayoutColorAccent">#aa00ff</color>
+
+    <!-- ========================================== -->
+    <!-- COLORS USED FOR THE GRID VIEW LAYOUT STUFF -->
+    <!-- ========================================== -->
+    <color name="gridViewLayoutColorPrimary">#e91e63</color>
+    <color name="gridViewLayoutColorPrimaryDark">#c2185b</color>
+    <color name="gridViewLayoutColorPrimaryLight">#fce4ec</color>
+    <color name="gridViewLayoutColorAccent">#c51162</color>
+
+    <!-- ========================================== -->
+    <!-- COLORS USED FOR THE LIST VIEW LAYOUT STUFF -->
+    <!-- ========================================== -->
+    <color name="listViewLayoutColorPrimary">#673ab7</color>
+    <color name="listViewLayoutColorPrimaryDark">#512da8</color>
+    <color name="listViewLayoutColorPrimaryLight">#ede7f6</color>
+    <color name="listViewLayoutColorAccent">#6200ea</color>
+
+    <!-- ============================================== -->
+    <!-- COLORS USED FOR THE RECYCLER VIEW LAYOUT STUFF -->
+    <!-- ============================================== -->
+    <color name="recyclerViewLayoutColorPrimary">#e64a19</color>
+    <color name="recyclerViewLayoutColorPrimaryDark">#bf360c</color>
+    <color name="recyclerViewLayoutColorPrimaryLight">#fbe9e7</color>
+    <color name="recyclerViewLayoutColorAccent">#dd2c00</color>
+
+    <!-- =============================== -->
+    <!-- COLORS USED FOR THE AUTHOR CARD -->
+    <!-- =============================== -->
+    <color name="authorCardTitleTextBackgroundColor">#607d8b</color>
+    <color name="authorCardContentTextColor">#455a64</color>
+    <color name="authorCardBackgroundColor">#eceff1</color>
+
 </resources>

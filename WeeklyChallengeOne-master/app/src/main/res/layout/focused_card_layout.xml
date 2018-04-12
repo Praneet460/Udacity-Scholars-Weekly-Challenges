@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/FocusedCardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/focused_card_content_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/focused_title_text_id"
+            tools:text="Name or Title"
+            tools:background="@color/constraintLayoutColorPrimary"
+            style="@style/CardItemTitleTextStyle" />
+
+        <TextView
+            android:id="@+id/description_text_id"
+            android:layout_marginTop="@dimen/fcl_description_text_margin"
+            android:layout_marginStart="@dimen/fcl_description_text_margin"
+            android:layout_marginEnd="@dimen/fcl_description_text_margin"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fcl_description_text_size"
+            app:layout_constraintTop_toBottomOf="@+id/focused_title_text_id"
+            style="@style/ConstraintCenterHorizontalStyle"
+            tools:text="This is where the description is placed.\nLorem ipsum dolor sit amet, nobis nostrum mei ea. Vis ei possit eirmod argumentum, modo interpretaris nec ex. Detraxit definiebas cum eu. Doming tamquam his in, nec solet alienum ne.\n\nPro at dicam postea principes, nam timeam fabulas ullamcorper ne, in quo dicat scribentur. Eam scripta aliquando voluptatibus no, no cum ullum libris numquam, eu tota efficiendi mel. Putent blandit complectitur ei duo, ceteros eligendi constituam quo in. An sea blandit appellantur. Eu sea diam altera periculis, qui odio prompta dolorum ut, eam possit mandamus et. Aliquam propriae adipisci eu vix, sea etiam delectus signiferumque cu." />
+
+        <Button
+            android:id="@+id/button_close_id"
+            style="@style/CardActionCloseButtonStyle"
+            app:layout_constraintTop_toBottomOf="@+id/description_text_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/button_learn_more_id"
+            style="@style/CardActionLearnMoreButtonStyle"
+            app:layout_constraintTop_toTopOf="@+id/button_close_id"
+            app:layout_constraintStart_toEndOf="@+id/button_close_id"
+            app:layout_constraintBottom_toBottomOf="@+id/button_close_id" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

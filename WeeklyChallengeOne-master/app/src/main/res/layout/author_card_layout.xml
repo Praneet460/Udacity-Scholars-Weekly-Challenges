@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/row_item_card_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/AuthorCardViewStyle">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/authorCardBackgroundColor">
+
+        <TextView
+            android:id="@+id/author_title_text_id"
+            android:text="@string/acl_card_title"
+            android:background="@color/authorCardTitleTextBackgroundColor"
+            style="@style/AuthorCardItemTitleTextStyle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/author_sign_text_id"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/acl_sign_text_height"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/acl_sign_text_padding"
+            android:layout_marginEnd="@dimen/acl_sign_text_margin_end"
+            android:layout_marginStart="@dimen/acl_sign_text_margin_start"
+            android:layout_marginTop="@dimen/acl_sign_text_margin_top"
+            android:text="@string/acl_sign_text"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="@dimen/acl_sign_min_text_size"
+            app:autoSizeStepGranularity="@dimen/acl_sign_text_size_step"
+            android:textColor="@color/authorCardContentTextColor"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/ConstraintCenterHorizontalStyle"
+            app:layout_constraintTop_toBottomOf="@+id/author_title_text_id" />
+
+        <ImageView
+            android:id="@+id/author_udacity_image_id"
+            style="@style/AuthorCardClickableImageViewStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/author_github_image_id"
+            app:layout_constraintEnd_toStartOf="@+id/author_github_image_id"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/author_github_image_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/author_github_image_id"
+            app:srcCompat="@drawable/ic_udacity" />
+
+        <ImageView
+            android:id="@+id/author_github_image_id"
+            style="@style/AuthorCardClickableImageViewStyle"
+            android:layout_marginTop="@dimen/acl_github_image_margin_top"
+            android:layout_marginBottom="@dimen/acl_github_image_margin_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/author_linkedin_image_id"
+            app:layout_constraintLeft_toRightOf="@+id/author_udacity_image_id"
+            app:layout_constraintRight_toLeftOf="@+id/author_linkedin_image_id"
+            app:layout_constraintStart_toEndOf="@+id/author_udacity_image_id"
+            app:layout_constraintTop_toBottomOf="@+id/author_sign_text_id"
+            app:srcCompat="@drawable/ic_github" />
+
+        <ImageView
+            android:id="@+id/author_linkedin_image_id"
+            style="@style/AuthorCardClickableImageViewStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/author_github_image_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/author_github_image_id"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/author_github_image_id"
+            app:layout_constraintTop_toTopOf="@+id/author_github_image_id"
+            app:srcCompat="@drawable/ic_linkedin" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
