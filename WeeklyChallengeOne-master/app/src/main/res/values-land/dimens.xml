@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ================================================== -->
+    <!-- FOR THE AUTHOR CARD ITEM IN author_card_layout.xml -->
+    <!-- ================================================== -->
+    <dimen name="acl_sign_text_height">82dp</dimen>
+</resources>

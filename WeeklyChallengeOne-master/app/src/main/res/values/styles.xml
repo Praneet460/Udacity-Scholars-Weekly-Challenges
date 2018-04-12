@@ -8,4 +8,138 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- ================================== -->
+    <!-- STYLES USED FOR CONSTRAINT LAYOUTS -->
+    <!-- ================================== -->
+
+    <!-- Style to align the View component under ConstraintLayout in center_horizontal format -->
+    <style name="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Top in center_horizontal format -->
+    <style name="ConstraintTopCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Bottom in center_horizontal format -->
+    <style name="ConstraintBottomCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the complete Center of its Parent -->
+    <style name="ConstraintCenterInParentStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout in center_vertical format -->
+    <style name="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Left in center_vertical format -->
+    <style name="ConstraintLeftCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Right in center_vertical format -->
+    <style name="ConstraintRightCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <!-- ==================================== -->
+    <!-- STYLES USED FOR THE CARDS IN THE APP -->
+    <!-- ==================================== -->
+
+    <!-- Parent Style of the Cards used in the App -->
+    <style name="BaseCardViewStyle" parent="CardView">
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!-- Child Style of the Card used when the item in 'R.layout.row_layout' is expanded -->
+    <style name="FocusedCardViewStyle" parent="BaseCardViewStyle">
+        <item name="cardCornerRadius">@dimen/fcl_card_corner_radius</item>
+        <item name="cardElevation">@dimen/fcl_card_elevation</item>
+    </style>
+
+    <!-- Child style of the Card used for the Author information -->
+    <style name="AuthorCardViewStyle" parent="BaseCardViewStyle">
+        <item name="cardCornerRadius">@dimen/acl_card_corner_radius</item>
+        <item name="cardElevation">@dimen/acl_card_elevation</item>
+    </style>
+
+    <!-- ================================================== -->
+    <!-- STYLES USED FOR THE VIEWS IN 'R.layout.row_layout' -->
+    <!-- ================================================== -->
+
+    <!-- Parent Style for the Title Text used in the App -->
+    <style name="BaseItemTitleTextStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/item_title_text_size</item>
+    </style>
+
+    <!-- Child Style for the Title Text used in 'R.layout.row_layout' -->
+    <style name="RowItemTitleTextStyle" parent="BaseItemTitleTextStyle">
+        <item name="android:padding">@dimen/row_item_content_padding</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Child Style for the Title Text used when the item in 'R.layout.row_layout' is expanded -->
+    <style name="CardItemTitleTextStyle" parent="BaseItemTitleTextStyle">
+        <item name="android:padding">@dimen/fcl_item_title_content_padding</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <!-- Parent Style for Card Action Buttons used in the expanded Card Item -->
+    <style name="BaseCardActionButtonStyle">
+        <item name="android:layout_height">@dimen/fcl_action_button_height</item>
+        <item name="android:paddingStart">@dimen/fcl_action_button_padding</item>
+        <item name="android:paddingEnd">@dimen/fcl_action_button_padding</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/fcl_action_button_margin</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+
+    <!-- Child Style for the 'Close' Button Action used in the expanded Card Item -->
+    <style name="CardActionCloseButtonStyle" parent="BaseCardActionButtonStyle">
+        <item name="android:layout_width">@dimen/fcl_action_button_close_width</item>
+        <item name="android:layout_marginTop">@dimen/fcl_action_button_close_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/fcl_action_button_margin</item>
+        <item name="android:text">@string/close_button_text</item>
+    </style>
+
+    <!-- Child Style for the 'Learn More' Button Action used in the expanded Card Item -->
+    <style name="CardActionLearnMoreButtonStyle" parent="BaseCardActionButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">@string/learn_more_button_text</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- STYLES USED FOR THE AUTHOR CARD IN THE APP -->
+    <!-- ========================================== -->
+    <!-- Style for the Clickable ImageViews -->
+    <style name="AuthorCardClickableImageViewStyle">
+        <item name="android:layout_width">@dimen/acl_about_imageview_size</item>
+        <item name="android:layout_height">@dimen/acl_about_imageview_size</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Child Style for the Author Title Text -->
+    <style name="AuthorCardItemTitleTextStyle" parent="CardItemTitleTextStyle">
+        <item name="android:textSize">@dimen/acl_title_text_size</item>
+    </style>
+
 </resources>

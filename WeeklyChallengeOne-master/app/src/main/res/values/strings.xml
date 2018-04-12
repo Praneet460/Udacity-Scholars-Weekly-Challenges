@@ -1,3 +1,106 @@
 <resources>
+    <!-- For the App Name/Title -->
     <string name="app_name">WeeklyChallengeOne</string>
+
+    <!-- ============================================ -->
+    <!-- STRINGS USED FOR THE CONSTRAINT LAYOUT STUFF -->
+    <!-- ============================================ -->
+    <string name="constraint_layout_title">Constraint Layout</string>
+    <string name="constraint_layout_desc">
+        \u2022 &lt;b&gt;Constraint Layout&lt;/b&gt; is a ViewGroup that allows to position and size widgets in a flexible way.
+        &lt;br/&gt;\u2022 Available as part of the Support Library which is supported on Android devices with Gingerbread or above (API level 9+).
+        &lt;br/&gt;\u2022 Using this layout, flattens the hierarchy of complex layouts. Hence, the layout performance is pretty awesome.
+        &lt;br/&gt;\u2022 This is the default layout in Android Studio.
+        &lt;br/&gt;\u2022 Provides helpers like Guideline and Barrier that behave similar to the ropes and green screens used while making Movies.
+        &lt;br/&gt;\u2022 Android Studio also comes with special tooling support for this layout.
+        &lt;br/&gt;\u2022 All the items displayed here in this RecyclerView, is constructed using this layout.
+    </string>
+    <string name="constraint_layout_link" translatable="false">https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html</string>
+
+    <!-- ======================================== -->
+    <!-- STRINGS USED FOR THE LINEAR LAYOUT STUFF -->
+    <!-- ======================================== -->
+    <string name="linear_layout_title">Linear Layout</string>
+    <string name="linear_layout_desc">
+        \u2022 &lt;b&gt;Linear Layout&lt;/b&gt; is a ViewGroup that aligns all children in a single direction, either vertically or horizontally.
+    </string>
+    <string name="linear_layout_link" translatable="false">https://developer.android.com/guide/topics/ui/layout/linear.html</string>
+
+    <!-- ========================================== -->
+    <!-- STRINGS USED FOR THE RELATIVE LAYOUT STUFF -->
+    <!-- ========================================== -->
+    <string name="relative_layout_title">Relative Layout</string>
+    <string name="relative_layout_desc">
+        \u2022 &lt;b&gt;Relative Layout&lt;/b&gt; is a ViewGroup that displays child views in relative positions.
+        &lt;br/&gt;\u2022 The position of each view here can be relative to its sibling views or its parent.
+        &lt;br/&gt;\u2022 This layout helps removing Nested view groups and keeps the layout hierarchy flat, which in turn improves performance.
+    </string>
+    <string name="relative_layout_link" translatable="false">https://developer.android.com/guide/topics/ui/layout/relative.html</string>
+
+    <!-- =========================================== -->
+    <!-- STRINGS USED FOR THE CARD VIEW LAYOUT STUFF -->
+    <!-- =========================================== -->
+    <string name="card_view_layout_title">Card View</string>
+    <string name="card_view_layout_desc">
+        \u2022 &lt;b&gt;Card View&lt;/b&gt; is essentially a FrameLayout that provides a rounded corner, a background and shadow.
+        &lt;br/&gt;\u2022 It uses \'elevation\' property for Lollipop and above for shadows and falls back to custom emulated shadow on older platforms.
+        &lt;br/&gt;\u2022 They are meant for displaying content composed of different elements whose size or actions vary.
+        &lt;br/&gt;\u2022 They are &lt;b&gt;NOT&lt;/b&gt; meant for displaying homogeneous content that do not have variations in actions.
+    </string>
+    <string name="card_view_layout_link" translatable="false">https://developer.android.com/guide/topics/ui/layout/cardview.html</string>
+
+    <!-- ============================================ -->
+    <!-- STRINGS USED FOR THE SCROLLVIEW LAYOUT STUFF -->
+    <!-- ============================================ -->
+    <string name="scroll_view_layout_title">Scroll View</string>
+    <string name="scroll_view_layout_desc">
+        \u2022 &lt;b&gt;Scroll View&lt;/b&gt; extends FrameLayout the allows the view hierarchy or ViewGroup placed within it to be scrolled.
+        &lt;br/&gt;\u2022 It can have only one direct child placed within it.
+        &lt;br/&gt;\u2022 It supports vertical scrolling only.
+    </string>
+    <string name="scroll_view_layout_link" translatable="false">https://developer.android.com/reference/android/widget/ScrollView.html</string>
+
+    <!-- =========================================== -->
+    <!-- STRINGS USED FOR THE GRID VIEW LAYOUT STUFF -->
+    <!-- =========================================== -->
+    <string name="grid_view_layout_title">Grid View</string>
+    <string name="grid_view_layout_desc">
+        \u2022 &lt;b&gt;Grid View&lt;/b&gt; is an AdapterView that displays items in a scrollable two-dimensional grid.
+        &lt;br/&gt;\u2022 Items in the Grid can be loaded by an Adapter that extends BaseAdapter, which in turn implements ListAdapter.
+    </string>
+    <string name="grid_view_layout_link" translatable="false">https://developer.android.com/guide/topics/ui/layout/gridview.html</string>
+
+    <!-- =========================================== -->
+    <!-- STRINGS USED FOR THE LIST VIEW LAYOUT STUFF -->
+    <!-- =========================================== -->
+    <string name="list_view_layout_title">List View</string>
+    <string name="list_view_layout_desc">
+        \u2022 &lt;b&gt;List View&lt;/b&gt; is an AdapterView that displays a list of vertically scrollable items.
+        &lt;br/&gt;\u2022 Items in the ListView can be loaded by an Adapter that extends BaseAdapter, which in turn implements ListAdapter.
+    </string>
+    <string name="list_view_layout_link" translatable="false">https://developer.android.com/guide/topics/ui/layout/listview.html</string>
+
+    <!-- =============================================== -->
+    <!-- STRINGS USED FOR THE RECYCLER VIEW LAYOUT STUFF -->
+    <!-- =============================================== -->
+    <string name="recycler_view_layout_title">Recycler View</string>
+    <string name="recycler_view_layout_desc">
+        \u2022 &lt;b&gt;Recycler View&lt;/b&gt; is an AdapterView that can displays a list of scrollable items, either vertically / horizontally / Grid / Staggered Grid.
+        &lt;br/&gt;\u2022 It is a more advanced and modular version of ListView.
+        &lt;br/&gt;\u2022 Useful for large datasets or for frequently changing data, since it creates views as and when needed, and reuses views by rebinding them with the correct data at the position.
+        &lt;br/&gt;\u2022 All the Items here are being shown using RecyclerView.
+    </string>
+    <string name="recycler_view_layout_link" translatable="false">https://developer.android.com/guide/topics/ui/layout/recyclerview.html</string>
+    <string name="close_button_text">Close</string>
+    <string name="learn_more_button_text">Learn More</string>
+
+    <!-- ================================ -->
+    <!-- STRINGS USED FOR THE AUTHOR CARD -->
+    <!-- ================================ -->
+    <string name="acl_card_title">Fixed and Polished by</string>
+    <string name="acl_sign_text">Kaushik N. Sanji</string>
+    <string name="udacity_course_link" translatable="false">https://in.udacity.com/google-india-scholarships</string>
+    <string name="github_profile_link" translatable="false">https://github.com/kaushiknsanji</string>
+    <string name="linkedin_profile_link" translatable="false">https://www.linkedin.com/in/kaushiknsanji</string>
+
 </resources>

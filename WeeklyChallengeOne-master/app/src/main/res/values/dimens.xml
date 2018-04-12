@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MATCH CONSTRAINT Dimension used for ConstraintLayouts -->
+    <dimen name="match_constraint_0dp">0dp</dimen>
+
+    <!-- ================================== -->
+    <!-- FOR THE ROW ITEM in row_layout.xml -->
+    <!-- ================================== -->
+    <dimen name="row_item_card_margin">12dp</dimen>
+    <dimen name="row_item_content_padding">12dp</dimen>
+    <dimen name="item_title_text_size">20sp</dimen>
+
+    <!-- ============================================ -->
+    <!-- FOR THE CARD ITEM IN focused_card_layout.xml -->
+    <!-- ============================================ -->
+    <dimen name="fcl_item_title_content_padding">16dp</dimen>
+    <dimen name="fcl_description_text_margin">16dp</dimen>
+    <dimen name="fcl_description_text_size">16sp</dimen>
+    <dimen name="fcl_action_button_padding">8dp</dimen>
+    <dimen name="fcl_action_button_margin">8dp</dimen>
+    <dimen name="fcl_action_button_height">36dp</dimen>
+    <dimen name="fcl_action_button_close_width">64dp</dimen>
+    <dimen name="fcl_action_button_close_margin_top">24dp</dimen>
+    <dimen name="fcl_card_corner_radius">8dp</dimen>
+    <dimen name="fcl_card_elevation">6dp</dimen>
+
+    <!-- ================================================== -->
+    <!-- FOR THE AUTHOR CARD ITEM IN author_card_layout.xml -->
+    <!-- ================================================== -->
+    <dimen name="acl_about_imageview_size">56dp</dimen>
+    <dimen name="acl_sign_text_margin_top">16dp</dimen>
+    <dimen name="acl_sign_text_margin_start">8dp</dimen>
+    <dimen name="acl_sign_text_margin_end">8dp</dimen>
+    <dimen name="acl_title_text_size">26sp</dimen>
+    <dimen name="acl_sign_min_text_size">32sp</dimen>
+    <dimen name="acl_github_image_margin_top">24dp</dimen>
+    <dimen name="acl_github_image_margin_bottom">16dp</dimen>
+    <dimen name="acl_card_corner_radius">6dp</dimen>
+    <dimen name="acl_card_elevation">4dp</dimen>
+    <dimen name="acl_sign_text_height">72dp</dimen>
+    <dimen name="acl_sign_text_size_step">4sp</dimen>
+    <dimen name="acl_sign_text_padding">6dp</dimen>
+
+</resources>
