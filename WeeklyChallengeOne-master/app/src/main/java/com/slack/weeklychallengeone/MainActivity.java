@@ -2,6 +2,7 @@ package com.slack.weeklychallengeone;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -10,7 +11,7 @@ import com.slack.weeklychallengeone.Utils.MyAdapter;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyAdapter.MyAdapterListener{
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(layoutManager);
     }
 
@@ -53,11 +55,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mAdapter = new MyAdapter(mArrayList);
+        mAdapter = new MyAdapter(this, mArrayList, this);
         mRecyclerView.setAdapter(mAdapter);
 
     }
 
+    private void toggleSelection(int position) {
+        mAdapter.toggleSelection(position);
+    }
 
 
+    @Override
+    public void onItemClicked(int position) {
+        toggleSelection(position);
+    }
+
+    @Override
+    public void onIconBookmarkClicked(int position) {
+
+    }
 }
