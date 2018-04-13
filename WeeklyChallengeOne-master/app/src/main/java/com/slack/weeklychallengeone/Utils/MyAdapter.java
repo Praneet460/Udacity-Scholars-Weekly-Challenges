@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseBooleanArray;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.slack.weeklychallengeone.R;
@@ -48,9 +50,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
-        holder.tv_name.setText(mArrayList.get(position).getName());
-        holder.tv_title.setText(mArrayList.get(position).getName());
-        holder.description.setText(mArrayList.get(position).getDescription());
+
+        Model model = mArrayList.get(position);
+        holder.tv_name.setText(model.getName());
+        holder.tv_title.setText(model.getName());
+        holder.description.setText(model.getDescription());
 
         holder.more_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,12 +68,32 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
         });
 
+        holder.bookmark_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onIconBookmarkClicked(holder.getAdapterPosition());
+                v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+            }
+        });
+
+        applyImportant(holder, model);
+
         applyIconAnimation(holder, position);
     }
 
     @Override
     public int getItemCount() {
         return mArrayList.size();
+    }
+
+    private void applyImportant(MyViewHolder holder, Model model) {
+        if(model.isImportant()) {
+            holder.bookmark_image.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_bookmark));
+            //holder.iconImageView.setColorFilter(ContextCompat.getColor(mContext, R.color.icon_tint_selected));
+        } else {
+            holder.bookmark_image.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_bookmark_border));
+            //holder.iconImageView.setColorFilter(ContextCompat.getColor(mContext, R.color.icon_tint_normal));
+        }
     }
 
     private void applyIconAnimation(MyViewHolder holder, int position) {
@@ -131,6 +155,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         private TextView tv_title;
         private TextView description;
         private Button more_button;
+        private ImageView bookmark_image;
         MyViewHolder(View view) {
             super(view);
 
@@ -140,6 +165,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             tv_title = view.findViewById(R.id.view_title);
             description = view.findViewById(R.id.description);
             more_button = view.findViewById(R.id.more);
+            bookmark_image = view.findViewById(R.id.bookmark_image);
             view.setOnClickListener(this);
 
         }

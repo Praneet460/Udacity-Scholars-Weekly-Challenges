@@ -5,11 +5,5 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="blue">#0072ff</color>
-    <color name="light_blue">#00c6ff</color>
 
-    <color name="dark_pink">#BB377D</color>
-    <color name="ligh_pink">#FBD3E9</color>
-
-    <color name="icon_tint_normal">#7a7a7a</color>
-    <color name="icon_tint_selected">#fed776</color>
 </resources>

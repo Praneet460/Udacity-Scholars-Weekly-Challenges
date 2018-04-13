@@ -78,6 +78,9 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.MyAdapt
 
     @Override
     public void onIconBookmarkClicked(int position) {
-
+        Model model = mArrayList.get(position);
+        model.setImportant(!model.isImportant());
+        mArrayList.set(position, model);
+        mAdapter.notifyDataSetChanged();
     }
 }

@@ -9,10 +9,6 @@
         parent layout, but it\'s more flexible than RelativeLayout and easier to use with Android
         Studio\'s Layout Editor.</string>
 
-    <string name="linear_description">LinearLayout is a view group that aligns all children in a
-        single direction, vertically or horizontally. You can specify the layout direction with the
-        android:orientation attribute.</string>
-
     <string name="relative_description">RelativeLayout is a view group that displays child views
         in relative positions. The position of each view can be specified as relative to sibling
         elements (such as to the left-of or below another view) or in positions relative to the

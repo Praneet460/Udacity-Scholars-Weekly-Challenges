@@ -4,6 +4,7 @@ public class Model {
     private String name;
     private String description;
     private String url;
+    private boolean isImportant = false;
 
     public Model(String name, String description, String url) {
         this.name = name;
@@ -17,6 +18,14 @@ public class Model {
 
     public String getUrl() {
         return url;
+    }
+
+    public boolean isImportant() {
+        return isImportant;
+    }
+
+    public void setImportant(boolean important) {
+        isImportant = important;
     }
 
     public String getName() {
