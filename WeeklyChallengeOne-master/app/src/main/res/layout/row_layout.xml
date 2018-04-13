@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        card_view:cardBackgroundColor="#FFC9CCF1"
+        card_view:cardBackgroundColor="@android:color/darker_gray"
         android:elevation="5dp"
         card_view:contentPadding="10dp"
         android:layout_gravity="center"
@@ -45,19 +45,31 @@
             android:gravity="center">
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/view_title"
             android:layout_width="match_parent"
             android:gravity="center"
             android:textSize="24sp"
             tools:text="Hey"
+            android:textColor="@android:color/white"
             android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
 
         <Button
             android:id="@+id/more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="3dp"
-            android:text="Click for more"/>
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:background="@null"
+            android:text="@string/more_text"
+            android:textColor="@color/blue"/>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

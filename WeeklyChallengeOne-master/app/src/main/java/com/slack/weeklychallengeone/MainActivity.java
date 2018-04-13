@@ -46,12 +46,18 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.MyAdapt
 
         mArrayList = new ArrayList<>();
 
-        mArrayList.add(new Model("Constraint Layout"));
-        mArrayList.add(new Model("Linear Layout"));
-        mArrayList.add(new Model("Relative Layout"));
-        mArrayList.add(new Model("Card View"));
-        mArrayList.add(new Model("Scroll Views"));
-        mArrayList.add(new Model("Grid View"));
+        mArrayList.add(new Model("Constraint Layout", getString(R.string.constraint_description),
+                "https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html"));
+        mArrayList.add(new Model("Linear Layout",getString(R.string.cardview_description),
+                "https://developer.android.com/reference/android/widget/LinearLayout.html"));
+        mArrayList.add(new Model("Relative Layout", getString(R.string.relative_description),
+                "https://developer.android.com/reference/android/widget/RelativeLayout.html"));
+        mArrayList.add(new Model("Card View", getString(R.string.cardview_description),
+                "https://developer.android.com/reference/android/support/v7/widget/CardView.html"));
+        mArrayList.add(new Model("Scroll Views", getString(R.string.scrollview_description),
+                "https://developer.android.com/reference/android/widget/ScrollView.html"));
+        mArrayList.add(new Model("Grid View", getString(R.string.gridview_description),
+                "https://developer.android.com/reference/android/widget/GridView.html"));
 
 
 

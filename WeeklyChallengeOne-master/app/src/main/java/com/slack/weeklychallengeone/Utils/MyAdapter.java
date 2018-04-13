@@ -1,6 +1,8 @@
 package com.slack.weeklychallengeone.Utils;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +11,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.slack.weeklychallengeone.R;
@@ -44,8 +47,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         holder.tv_name.setText(mArrayList.get(position).getName());
+        holder.tv_title.setText(mArrayList.get(position).getName());
+        holder.description.setText(mArrayList.get(position).getDescription());
+
+        holder.more_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(mArrayList.get(holder.getAdapterPosition()).getUrl());
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+                if(intent.resolveActivity(mContext.getPackageManager()) != null) {
+                    mContext.startActivity(intent);
+                }
+            }
+        });
 
         applyIconAnimation(holder, position);
     }
@@ -111,12 +128,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         private TextView tv_name;
         private CardView mFrontView;
         private CardView mBackView;
+        private TextView tv_title;
+        private TextView description;
+        private Button more_button;
         MyViewHolder(View view) {
             super(view);
 
             tv_name = view.findViewById(R.id.tv_name);
             mFrontView = view.findViewById(R.id.front_card_view);
             mBackView = view.findViewById(R.id.back_card_view);
+            tv_title = view.findViewById(R.id.view_title);
+            description = view.findViewById(R.id.description);
+            more_button = view.findViewById(R.id.more);
             view.setOnClickListener(this);
 
         }

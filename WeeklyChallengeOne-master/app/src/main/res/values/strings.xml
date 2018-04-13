@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">WeeklyChallengeOne</string>
+
+    <string name="more_text"><u>more</u></string>
+
+    <string name="constraint_description">ConstraintLayout allows you to create large and complex
+        layouts with a flat view hierarchy (no nested view groups).It\'s similar to RelativeLayout
+        in that all views are laid out according to relationships between sibling views and the
+        parent layout, but it\'s more flexible than RelativeLayout and easier to use with Android
+        Studio\'s Layout Editor.</string>
+
+    <string name="linear_description">LinearLayout is a view group that aligns all children in a
+        single direction, vertically or horizontally. You can specify the layout direction with the
+        android:orientation attribute.</string>
+
+    <string name="relative_description">RelativeLayout is a view group that displays child views
+        in relative positions. The position of each view can be specified as relative to sibling
+        elements (such as to the left-of or below another view) or in positions relative to the
+        parent RelativeLayout area (such as aligned to the bottom, left or center).</string>
+
+    <string name="cardview_description">A FrameLayout with a rounded corner background and shadow.
+        CardView uses elevation property on Lollipop for shadows and falls back to a custom
+        emulated shadowimplementation on older platforms.</string>
+
+    <string name="scrollview_description">A view group that allows the view hierarchy placed within
+        it to be scrolled. Scroll view may have only one direct child placed within it. To add
+        multiple views within the scroll view, make the direct child you add a view group, for
+        example LinearLayout, and place additional views within that LinearLayout.</string>
+
+    <string name="gridview_description">A view that shows items in two-dimensional scrolling grid.
+        The items in the grid come from the ListAdapter associated with this view.</string>
 </resources>
