@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.MyAdapt
 
         mArrayList.add(new Model("Constraint Layout", getString(R.string.constraint_description),
                 "https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html"));
-        mArrayList.add(new Model("Linear Layout",getString(R.string.cardview_description),
+        mArrayList.add(new Model("Linear Layout",getString(R.string.linear_description),
                 "https://developer.android.com/reference/android/widget/LinearLayout.html"));
         mArrayList.add(new Model("Relative Layout", getString(R.string.relative_description),
                 "https://developer.android.com/reference/android/widget/RelativeLayout.html"));

@@ -89,10 +89,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private void applyImportant(MyViewHolder holder, Model model) {
         if(model.isImportant()) {
             holder.bookmark_image.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_bookmark));
-            //holder.iconImageView.setColorFilter(ContextCompat.getColor(mContext, R.color.icon_tint_selected));
         } else {
             holder.bookmark_image.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_bookmark_border));
-            //holder.iconImageView.setColorFilter(ContextCompat.getColor(mContext, R.color.icon_tint_normal));
         }
     }
 
