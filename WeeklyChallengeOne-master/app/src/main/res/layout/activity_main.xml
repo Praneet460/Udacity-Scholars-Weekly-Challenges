@@ -1,19 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:paddingTop="20dp">
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyler_view"
+    <Button
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="#46dbd4"
+        android:inputType="none"
+        android:text="Relative Layout:
+It is a view group that displays child views in relative positions."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="160dp" />
 
-    </android.support.v7.widget.RecyclerView>
+    <Button
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#46dbd4"
+        android:inputType="none"
+        android:text="Linearlayout:
+It is a view group that aligns all children in a single direction, vertically or horizontally."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="84dp" />
 
+    <Button
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#46dbd4"
+        android:inputType="none"
+        android:text="Card View:
+It is a FrameLayout with a rounded corner background and shadow."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="246dp" />
 
+    <Button
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#46dbd4"
+        android:inputType="none"
+        android:text="Scroll View:
+ It is a FrameLayout, meaning you should place one child in it containing the entire contents to scroll."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="344dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#46dbd4"
+        android:inputType="none"
+        android:text="Grid View:
+It is a ViewGroup that displays items in a two-dimensional, scrollable grid."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="440dp" />
+
+</LinearLayout>
