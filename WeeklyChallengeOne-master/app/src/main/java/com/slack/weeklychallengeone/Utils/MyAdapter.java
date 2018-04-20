@@ -1,5 +1,7 @@
 package com.slack.weeklychallengeone.Utils;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.slack.weeklychallengeone.CardActivity;
+import com.slack.weeklychallengeone.GridActivity;
+import com.slack.weeklychallengeone.InfoActivity;
+import com.slack.weeklychallengeone.LinearActivity;
+import com.slack.weeklychallengeone.MainActivity;
 import com.slack.weeklychallengeone.R;
+import com.slack.weeklychallengeone.RelativeActivity;
+import com.slack.weeklychallengeone.ScrollActivity;
 
 import java.util.ArrayList;
 
@@ -38,13 +47,60 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        private final Context context;
         private TextView tv_name;
-        MyViewHolder(View view) {
+        public MyViewHolder(View view) {
             super(view);
 
-            tv_name = view.findViewById(R.id.tv_name);
+            tv_name = (TextView) view.findViewById(R.id.tv_name);
+            view.setOnClickListener(this);
+            context=view.getContext();
+        }
 
+        @Override
+        public void onClick(View v) {
+            Intent i;
+            switch (getAdapterPosition())
+            {
+                case 0: {
+
+                    i = new Intent(context,InfoActivity.class);
+                    break;
+                }
+                case 1:
+                {
+                    i = new Intent(context,LinearActivity.class);
+                    break;
+                }
+                case 2:
+                {
+                    i = new Intent(context, RelativeActivity.class);
+                    break;
+                }
+                case 3:
+                {
+                    i = new Intent(context,CardActivity.class);
+                    break;
+                }
+                case 4:
+                {
+                    i = new Intent(context, ScrollActivity.class);
+                    break;
+                }
+                case 5:
+                {
+                    i = new Intent(context,GridActivity.class);
+                    break;
+                }
+                default:{
+                    i=new Intent(context,MainActivity.class);
+                }
+            }
+
+
+
+            context.startActivity(i);
         }
     }
 

@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">WeeklyChallengeOne</string>
+    <string name="constraint_description">
+        ConstraintLayout allows you to create large and complex layouts with a flat view hierarchy (no nested view groups).
+        It is similar to RelativeLayout in that all views are laid out according to relationships between sibling views and the parent layout, but it\'s more flexible than RelativeLayout and easier to use with Android Studio's Layout Editor
+    </string>
+    <string name="card_description">
+        CardView uses elevation property on Lollipop for shadows and falls back to a custom emulated shadow implementation on older platforms.
+
+Due to expensive nature of rounded corner clipping, on platforms before Lollipop, CardView does not clip its children that intersect with rounded corners. Instead, it adds padding to avoid such intersection (See setPreventCornerOverlap(boolean) to change this behavior).
+
+Before Lollipop, CardView adds padding to its content and draws shadows to that area. This padding amount is equal to maxCardElevation + (1 - cos45) * cornerRadius on the sides and maxCardElevation * 1.5 + (1 - cos45) * cornerRadius on top and bottom.
+    </string>
+    <string name="grid_description">
+        GridView is a ViewGroup that displays items in a two-dimensional, scrollable grid. The grid items are automatically inserted to the layout using a ListAdapter.
+    </string>
+    <string name="linear_description">
+        A layout that arranges other views either horizontally in a single column or vertically in a single row.
+        Set android:orientation to specify whether child views are displayed in a row or column.
+
+To control how linear layout aligns all the views it contains, set a value for android:gravity. For example, the snippet above sets android:gravity to "center". The value you set affects both horizontal and vertical alignment of all child views within the single row or column.
+
+You can set android:layout_weight on individual child views to specify how linear layout divides remaining space amongst the views it contains.
+    </string>
+    <string name="relative_description">
+        A Layout where the positions of the children can be described in relation to each other or to the parent.
+        A RelativeLayout is a very powerful utility for designing a user interface because it can eliminate nested view groups and keep your layout hierarchy flat, which improves performance. If you find yourself using several nested LinearLayout groups, you may be able to replace them with a single RelativeLayout.
+    </string>
+    <string name="scroll_description">
+        A view group that allows the view hierarchy placed within it to be scrolled. Scroll view may have only one direct child placed within it. To add multiple views within the scroll view, make the direct child you add a view group, for example LinearLayout, and place additional views within that LinearLayout.
+
+Scroll view supports vertical scrolling only. For horizontal scrolling, use HorizontalScrollView instead.
+
+Never add a RecyclerView or ListView to a scroll view. Doing so results in poor user interface performance and a poor user experience.
+    </string>
 </resources>
