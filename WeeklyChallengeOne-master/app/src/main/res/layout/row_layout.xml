@@ -1,22 +1,57 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <ImageButton
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:padding="6dp"
-            android:gravity="center_horizontal"
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="12dp"
+            android:id="@+id/card"
+            android:background="@drawable/item_gradient">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:id="@+id/firstLetter"
+                    android:textSize="40dp"
+                    android:textColor="#fff"
+                    android:text="A" />
+        </RelativeLayout>
+
+        <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_alignTop="@+id/card"
+            android:layout_toEndOf="@+id/card"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="28sp"
             android:textStyle="bold"
+            tools:text="Name or Title" />
+
+        <TextView
+            android:layout_margin="6dp"
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/card"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_name"
+            android:layout_toEndOf="@+id/card"
+            android:gravity="center"
             android:textColor="@android:color/primary_text_light"
             android:textSize="18sp"
-            tools:text="Name or Title"/>
+            android:textStyle="italic"
+            tools:text="Description" />
 
 
-</LinearLayout>
+</RelativeLayout>
