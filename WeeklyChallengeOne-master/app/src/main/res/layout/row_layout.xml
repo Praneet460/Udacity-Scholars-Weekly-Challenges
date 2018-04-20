@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <ImageButton
+        <TextView
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:padding="6dp"
             android:gravity="center_horizontal"
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:alpha="0.8"
+            android:layout_margin="16dp"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@android:color/primary_text_light"
@@ -20,3 +23,4 @@
 
 
 </LinearLayout>
+
