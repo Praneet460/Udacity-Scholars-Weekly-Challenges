@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- setting background of SplashScreen-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:shape="rectangle">
+
+    <gradient
+
+        android:startColor="#991001"
+
+        android:endColor="#fd7e23"
+
+        android:angle="90"/>
+
+
+
+</shape>
