@@ -15,11 +15,14 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
 
+    //Create a RecyclerView object.
+    private RecyclerView mRecyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);// Change the layout typo.
 
         initViews();
         loadData();
@@ -30,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
     private void initViews(){
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);// Change the typo from mRecyclerViews to mRecyclerView
     }
 
 
 
 
 
-
-/*    private void loadData(){
+    //Uncomment this loadData() method.
+    private void loadData(){
 
         mArrayList = new ArrayList<>();
 
@@ -53,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
-    }*/
+    }
 
 
 
