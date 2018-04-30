@@ -9,7 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".RelativeLayout"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:label=" "
+            android:name=".GridLayoutActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".ScrollViewActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".CardViewActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/ss_theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

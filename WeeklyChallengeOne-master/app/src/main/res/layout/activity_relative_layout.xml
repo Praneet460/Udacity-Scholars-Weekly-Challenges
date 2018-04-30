@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#0a0a0a"
+    android:layout_height="match_parent"
+    tools:context="com.slack.weeklychallengeone.RelativeLayout">
+
+
+
+    <View
+        android:transitionName="rl_item_two"
+        android:id="@+id/rl_item_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0a0a0a" />
+
+        <View
+            android:id="@+id/rl_item_one"
+            android:transitionName="rl_item_one"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#ffffff" />
+
+
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rl_item_three"
+            android:layout_width="130dp"
+            android:transitionName="rl_item_three"
+            android:layout_height="80dp"
+            android:background="#ffffff" />
+
+
+        <View
+            android:transitionName="rl_item_four"
+            android:id="@+id/rl_item_four"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:background="#ffffff" />
+
+        <View
+            android:transitionName="rl_item_five"
+            android:id="@+id/rl_item_five"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff" />
+
+
+    <ScrollView
+        android:layout_below="@id/rl_item_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/title_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Relative Layout"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"/>
+
+
+            <LinearLayout
+                android:id="@+id/desc_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/rl_desc"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rl_code"
+                        android:padding="16dp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

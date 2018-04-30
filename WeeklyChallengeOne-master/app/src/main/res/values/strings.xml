@@ -1,3 +1,169 @@
 <resources>
     <string name="app_name">WeeklyChallengeOne</string>
+
+    <string name="cl_desc">A <b>ConstraintLayout</b> is a ViewGroup which allows you to position and size widgets in a flexible way.\n\n
+<b>Note:</b> ConstraintLayout is available as a support library that you can use on Android systems starting with API level 9 (Gingerbread). As such, we are planning on enriching its API and capabilities over time. This documentation will reflect those changes.</string>
+
+    <string name="ll_horizontal">android:orientation=\"horizontal\"</string>
+    <string name="ll_vertical">android:orientation=\"vertical\"</string>
+
+    <string name="ll_desc">A layout that arranges other views either horizontally in a single column or vertically in a single row.\n\n
+        Set <i>android:orientation</i> to specify whether child views are displayed in a row or column.
+        To control how linear layout aligns all the views it contains, set a value for <i>android:gravity</i>. For example, the snippet above sets android:gravity to \"center\". The value you set affects both horizontal and vertical alignment of all child views within the single row or column.\n\n
+        You can set <i>android:layout_weight</i> on individual child views to specify how linear layout divides remaining space amongst the views it contains. See the Linear Layout guide for an example.
+    </string>
+
+
+    <string name="ll_code">
+        &lt;LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n
+            android:layout_width=\"match_parent\"\n
+            android:layout_height=\"match_parent\"\n
+            android:paddingLeft=\"16dp\"\n
+            android:paddingRight=\"16dp\"\n
+            android:orientation=\"horizontal\"\n
+            android:gravity=\"center\">\n\n
+
+   &lt;!-- Include other widget or layout tags here. These are considered
+           "child views" or "children" of the linear layout -->\n\n
+
+ &lt;/LinearLayout>
+    </string>
+
+    <string name="rl_desc">
+        A Layout where the positions of the children can be described in relation to each other or to the parent.\n\n
+
+        Note that you cannot have a circular dependency between the size of the RelativeLayout and the position of its children. For example, you cannot have a <b>RelativeLayout</b> whose height is set to <i>WRAP_CONTENT</i> and a child set to <i>ALIGN_PARENT_BOTTOM</i>.\n\n
+
+        <b>Note:</b> In platform version 17 and lower, RelativeLayout was affected by a measurement bug that could cause child views to be measured with incorrect MeasureSpec values. (See MeasureSpec.makeMeasureSpec for more details.) This was triggered when a RelativeLayout container was placed in a scrolling container, such as a ScrollView or HorizontalScrollView. If a custom view not equipped to properly measure with the MeasureSpec mode UNSPECIFIED was placed in a RelativeLayout, this would silently work anyway as RelativeLayout would pass a very large AT_MOST MeasureSpec instead.\n\n
+
+This behavior has been preserved for apps that set <i>android:targetSdkVersion</i>=\"17\" or older in their manifest\'s uses-sdk tag for compatibility. Apps targeting SDK version 18 or newer will receive the correct behavior
+    </string>
+
+    <string name="rl_code">
+        &lt;?xml version=\"1.0\" encoding=\"utf-8\"?>\n
+        &lt;RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="match_parent"\n
+            android:paddingLeft="16dp"\n
+            android:paddingRight="16dp" >\n\n
+    &lt;EditText\n
+        android:id=\"@+id/name\"\n
+        android:layout_width=\"match_parent\"\n
+        android:layout_height="wrap_content"\n
+        android:hint="@string/reminder" />\n\n
+    &lt;Spinner\n
+        android:id=\"@+id/dates\"\n
+        android:layout_width="0dp"\n
+        android:layout_height=\"wrap_content\"\n
+        android:layout_below="@id/name"\n
+        android:layout_alignParentLeft="true"\n
+        android:layout_toLeftOf="@+id/times" />\n\n
+    &lt;Spinner\n
+        android:id="@id/times"\n
+        android:layout_width="96dp"\n
+        android:layout_height="wrap_content"\n
+        android:layout_below="@id/name"\n
+        android:layout_alignParentRight="true" />\n\n
+    &lt;Button\n
+        android:layout_width="96dp"\n
+        android:layout_height="wrap_content"\n
+        android:layout_below="@id/times"\n
+        android:layout_alignParentRight="true"\n
+        android:text="@string/done" />\n\n
+&lt;/RelativeLayout>
+    </string>
+
+    <string name="gl_desc">A view that shows items in two-dimensional scrolling grid. The items in the grid come from the ListAdapter associated with this view.</string>
+
+    <string name="gl_code">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;GridView xmlns:android="http://schemas.android.com/apk/res/android"\n
+            android:id="@+id/grid_view"\n
+            android:layout_width="fill_parent"\n
+            android:layout_height="fill_parent"\n
+            android:numColumns="auto_fit"\n
+            android:columnWidth="90dp"\n
+            android:horizontalSpacing="10dp"\n
+            android:verticalSpacing="10dp"\n
+            android:gravity="center"\n
+            android:stretchMode="columnWidth" >  \n\n
+
+&lt;/GridView>
+    </string>
+
+    <string name="gl_item_one">
+        <b>Column: 1</b>\n
+        <b>Item: 1</b>
+    </string>
+    <string name="gl_item_two">
+        <b>Column: 1</b>\n
+        <b>Item: 2</b>
+    </string>
+    <string name="gl_item_three">
+        <b>Column: 1</b>\n
+        <b>Item: 2</b>
+    </string>
+    <string name="gl_item_four">
+        <b>Column: 2</b>\n
+        <b>Item: 1</b>
+    </string>
+    <string name="gl_item_five">
+        <b>Column: 2</b>\n
+        <b>Item: 2</b>
+    </string>
+    <string name="gl_item_six">
+        <b>Column: 2</b>\n
+        <b>Item: 3</b>
+    </string>
+
+    <string name="sv_desc">
+        A view group that allows the view hierarchy placed within it to be scrolled. Scroll view may have only one direct child placed within it. To add multiple views within the scroll view, make the direct child you add a view group, for example LinearLayout, and place additional views within that LinearLayout.\n\n
+
+        Scroll view supports vertical scrolling only. For horizontal scrolling, use <b>HorizontalScrollView</b> instead.\n\n
+
+                          <i>\" I\'m inside a ScrollView.\"</i>\n\n
+
+        Never add a <b>RecyclerView</b> or <b>ListView</b> to a scroll view. Doing so results in poor user interface performance and a poor user experience.\n\n
+
+        For vertical scrolling, consider NestedScrollView instead of scroll view which offers greater user interface flexibility and support for the material design scrolling patterns.
+    </string>
+
+    <string name="sv_code">
+        &lt;ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">\n\n
+
+
+        &lt;!&#8212; everything you already have &#8212;>\n\n
+
+&lt;/ScrollView>
+    </string>
+
+    <string name="cv_desc">
+        A FrameLayout with a rounded corner background and shadow.\n\n
+
+CardView uses elevation property on Lollipop for shadows and falls back to a custom emulated shadow implementation on older platforms.\n\n
+
+Due to expensive nature of rounded corner clipping, on platforms before Lollipop, CardView does not clip its children that intersect with rounded corners. Instead, it adds padding to avoid such intersection (See setPreventCornerOverlap(boolean) to change this behavior).\n\n
+
+Before Lollipop, CardView adds padding to its content and draws shadows to that area. This padding amount is equal to maxCardElevation + (1 - cos45) * cornerRadius on the sides and maxCardElevation * 1.5 + (1 - cos45) * cornerRadius on top and bottom.\n\n
+
+Since padding is used to offset content for shadows, you cannot set padding on CardView. Instead, you can use content padding attributes in XML or setContentPadding(int, int, int, int) in code to set the padding between the edges of the CardView and children of CardView.\n\n
+
+Note that, if you specify exact dimensions for the CardView, because of the shadows, its content area will be different between platforms before Lollipop and after Lollipop. By using api version specific resource values, you can avoid these changes. Alternatively, If you want CardView to add inner padding on platforms Lollipop and after as well, you can call setUseCompatPadding(boolean) and pass true.\n\n
+
+To change CardView's elevation in a backward compatible way, use setCardElevation(float). CardView will use elevation API on Lollipop and before Lollipop, it will change the shadow size. To avoid moving the View while shadow size is changing, shadow size is clamped by getMaxCardElevation(). If you want to change elevation dynamically, you should call setMaxCardElevation(float) when CardView is initialized.\n\n
+    </string>
+
+    <string name="cv_code">
+         &lt;android.support.v7.widget.CardView\n
+             android:layout_below="@id/my_card_view"\n
+             android:layout_marginTop="30dp"\n
+             android:layout_width="match_parent"\n
+             android:layout_height="wrap_content"\n
+             app:cardBackgroundColor="#ffffff"\n
+             app:cardCornerRadius="4dp"
+             app:cardElevation="4dp"/>
+    </string>
 </resources>
