@@ -21,6 +21,7 @@ public class LinearLayoutActivity extends AppCompatActivity {
 
     private void animateContent(TextView textView, int id) {
 
+
         textView = findViewById(id);
         textView.setVisibility(View.VISIBLE);
         animation = AnimationUtils.loadAnimation(this, android.R.anim.fade_out);
