@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0a0a0a">
+        <TextView
+            android:id="@+id/title_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Linear Layout"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_vertical_demo"
+        android:layout_below="@id/ll_horizontal_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/ll_vertical"/>
+
+
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/ll_item_one_ver"
+                android:transitionName="ll_item_one"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/white">
+                <TextView
+                    android:id="@+id/veri_item_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item 1"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_below="@id/ll_item_one_ver"
+                android:id="@+id/ll_item_two_ver"
+                android:transitionName="ll_item_two"
+                android:layout_width="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white" >
+                <TextView
+                    android:id="@+id/veri_item_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item 2"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_below="@id/ll_item_two_ver"
+                android:layout_marginTop="16dp"
+                android:transitionName="ll_item_three"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white" >
+                <TextView
+
+                    android:id="@+id/veri_item_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item 3"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/title_ll"
+        android:id="@+id/ll_horizontal_demo"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:padding="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/ll_horizontal"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:transitionName="ll_item_four"
+                android:id="@+id/ll_item_one"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/ll_item_two"
+                android:background="@android:color/white" >
+                <TextView
+                    android:id="@+id/hori_item_one"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Item 1"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:transitionName="ll_item_five"
+                android:layout_centerInParent="true"
+                android:id="@+id/ll_item_two"
+                android:layout_width="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white" >
+                <TextView
+                    android:id="@+id/hori_item_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item 2"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:transitionName="ll_item_six"
+                android:layout_toEndOf="@id/ll_item_two"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white" >
+                <TextView
+                    android:id="@+id/hori_item_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item 3"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/desc_ll"
+        android:layout_below="@id/ll_vertical_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_below="@id/title_cl"
+        android:text="@string/ll_desc"
+        android:padding="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+    
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/desc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ll_code"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

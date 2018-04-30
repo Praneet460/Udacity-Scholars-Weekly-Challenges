@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#0a0a0a"
+    android:layout_height="match_parent"
+    tools:context="com.slack.weeklychallengeone.CardViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/title_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Card View"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_gravity="center"
+        android:paddingBottom="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"/>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/title_cv"
+        android:id="@+id/card_view_item"
+        android:transitionName="card_view_item"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/content_card"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:textColor="#da0a91"
+                android:textStyle="bold"
+                android:text="Say Hi! to me"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="I'm a cardView,\nI have shadow,\nalso having rounded corners."
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/desc_cv"
+        android:layout_below="@id/card_view_item"
+        android:text="@string/cv_desc"
+        android:padding="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/desc_cv"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cv_code"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0a0a0a"
+    tools:context="com.slack.weeklychallengeone.GridLayoutActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/title_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Grid View"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/gl_desc"
+            android:layout_below="@id/title_gl"
+            android:text="@string/gl_desc"
+            android:padding="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"/>
+
+
+        <LinearLayout
+            android:layout_below="@id/gl_desc"
+            android:id="@+id/gl_row_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:id="@+id/gl_item_four"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="#ffffff"
+                android:transitionName="gl_item_four">
+                <TextView
+                    android:id="@+id/gl_text_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gl_item_one"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/gl_item_three"
+                android:layout_width="160dp"
+                android:layout_marginStart="20dp"
+                android:layout_height="160dp"
+                android:background="#ffffff"
+                android:transitionName="gl_item_three" >
+                <TextView
+                    android:id="@+id/gl_text_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gl_item_four"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gl_row_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gl_row_one"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/gl_item_six"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="#ffffff"
+                android:transitionName="gl_item_two" >
+                <TextView
+                    android:id="@+id/gl_text_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gl_item_three"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/gl_item_five"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="20dp"
+                android:background="#ffffff"
+                android:transitionName="gl_item_one" >
+                <TextView
+                    android:id="@+id/gl_text_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gl_item_four"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/gl_row_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gl_row_two"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:id="@+id/gl_item_two"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="#ffffff"
+                android:transitionName="gl_item_two" >
+
+                <TextView
+                    android:id="@+id/gl_text_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gl_item_three"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/gl_item_one"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="20dp"
+                android:background="#ffffff"
+                android:transitionName="gl_item_one" >
+                <TextView
+                    android:id="@+id/gl_text_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gl_item_six"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/gl_row_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gl_code"
+                        android:padding="16dp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
