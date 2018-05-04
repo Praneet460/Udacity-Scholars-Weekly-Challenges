@@ -64,6 +64,7 @@ After removing the bugs the application will look like this :
 | Vansh Badkul | [Go](https://github.com/vansh1sh) |
 | Ishita J Kanani | [Go](https://github.com/ishitakanani) |
 | Kundan Kumar | [Go](https://github.com/kundank191) |
+| Jyothish Johnson | [Go](https://github.com/JyothishJohnson) |
 
 
 #### Note: The list of top to bottom sequences does not represent the ranking.
