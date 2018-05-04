@@ -20,7 +20,7 @@ After removing the bugs the application will look like this :
 
 <img src = "https://i.imgur.com/DfIu4Aq.png" width=350>
 
-## List of Contributers of Weekly Challenge One
+## List of Contributers to Weekly Challenge One
 
 | Name | Github Profile |
 | ---- | -------------- |
